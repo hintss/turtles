@@ -65,7 +65,7 @@ while true do
  
  ae.exportItem({id=exportType,dmg=exportDmg,}, chestDirection)
  
- term.setCursorPos(1, 1)
+ term.clear()
  
  print("Gravel: "..gravel)
  print("Sand:   "..sand)
@@ -74,5 +74,5 @@ while true do
  print("Creating: "..export)
  print(" ")
   
- sleep(5)
+ sleep(1)
 end
