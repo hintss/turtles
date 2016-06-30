@@ -11,6 +11,11 @@ chestDirection = "south"
 -- the size of the chest, smaller is better
 chestSize = 1 -- tiny chest (measured in slots)
 
+-- and that should be all that you need to edit!
+
+-- what things you can hammer to get what, in case your pack is different
+materials = {"cobble"}
+
 local ae = peripheral.wrap(aeDirection)
 
 -- empty the chest on startup
@@ -46,15 +51,15 @@ while true do
  local exportType = "ExtraUtilities:cobblestone_compressed"
  local exportDmg = 0
  
- if gravel < sand then
-  if gravel < dust then
+ if gravel <= sand then
+  if gravel <= dust then
    export = "gravel"
   else
    export = "dust"
    exportDmg = 14
   end
  else
-  if sand < dust then
+  if sand <= dust then
    export = "sand"
    exportDmg = 12
   else
